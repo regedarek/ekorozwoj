@@ -1,20 +1,12 @@
 <h1>Edytuj wiadomość</h1>
-
+<div id="epost">
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
     <%= f.text_area :body %>
-  </p>
-  <p>
     <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<% end %></div>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%# <%= link_to 'Pokaż', @post, :class => "przycisk" %>
+<%= link_to 'Wróć', posts_path, :class => "przycisk" %>

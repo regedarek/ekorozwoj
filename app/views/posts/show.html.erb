@@ -1,13 +1,6 @@
 <a href="http://ekorozwoj.heroku.com/posts"><div id="title_left"><img src="../images/logo.png" /></div>
   <div id="title_right"><h1>KN Ekorozwój</h1></div></a>
 <%= render :partial => @post %>
-
-
-  <%= link_to 'Edytuj', edit_post_path(@post) %> | 
-  <%= link_to 'Usuń', @post, :method => :delete, :confirm => "Napewno?" %> | 
-  <%= link_to 'Zobacz wszystkie posty', posts_path %> 
-
-
 <h2>Opinie, pytania, burza mózgów</h2>
 <div id="comments">
   <%= render :partial => @post.comments %>
